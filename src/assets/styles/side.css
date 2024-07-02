@@ -1,0 +1,125 @@
+
+.side{
+	position: absolute;
+	right: -70px;
+	width: 64px;
+	font-size: 32px;
+	transition: all 0.5s;
+	z-index: 3;
+	transform: translateY(-50%);
+	top: 50%;
+}
+
+@media (max-width: 767px) {
+	.side {
+		display: block;
+	}
+}
+@media (min-width: 767px) {  
+	.side {
+		display: block;
+	}
+}
+
+.side.active{
+	right: 40px;
+}
+
+.side .side-bar{
+	margin: 50px 0;
+	width: 60px;
+	border-radius: 30px;
+	border: 2px solid white;
+	background-color: rgba(4, 102, 146, 0.9);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.2), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.1), 0 16px 16px rgba(0,0,0,0.05);
+}
+
+.side-bar .side-item{
+	position: relative;
+	margin: 15px 7px;
+	font-size: 20px;
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	/* border: 1px solid white; */
+	/* overflow: hidden; */
+	cursor: pointer;
+	transition: all 0.5s;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.2), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.1), 0 16px 16px rgba(0,0,0,0.05);
+}
+.side-item:hover::before {
+	content: attr(data-detail);
+    color: white;
+    height: auto;
+    overflow-wrap: break-word;
+	padding: 15px;
+	font-size: 1.1rem;
+    position: absolute;
+    right: 60px;
+    width: 210px;
+	text-align: right;
+}
+.side-bar .side-item .home0{
+	transform: translate(-37px, -5px);
+}
+.side-bar .side-item .home1{
+	transform: translate(-51px, -6px);
+}
+.side-bar .side-item .home2{
+	transform: translate(-6px, -6px);
+}
+
+.side-bar.side-bar-bottom .side-item svg{
+	transform: translate(-6px, -6px);
+}
+.side-bar .side-item:hover svg .hover{
+	fill: #9FC966;
+}
+.side-bar .side-item.active svg .hover{
+	fill: #9FC966;
+}
+.side .side-item img{
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 30px;
+	height: 30px;
+}
+
+.side.mobile {
+	width: 100vw;
+	height: 100%;
+	right: -100vw;
+	background-color: rgba(4, 102, 146, 0.8);
+}
+.side.mobile.active {
+	right: 0px	;
+}
+
+/* .side.mobile .side-bar:first-child {
+	margin-top: calc(50% - 50px);
+} */
+.side.mobile .side-bar {
+	margin-left: calc(100vw - 100px);
+}
+.side.mobile .side-bar .side-item .menu-label{
+	position: absolute;
+    top: 10px;
+    right: 70px;
+    width: calc(100vw - 130px);
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: right;
+}
+
+@media (max-width: 767px) {	
+	.side-item:hover::before {
+		display: none;
+	}
+}
+@media (min-width: 767px) {  
+	
+	.side-item:hover::before {
+		display: block;
+	}
+}

@@ -1,0 +1,88 @@
+@font-face {
+  font-family: calibri_bold;
+  src: url("./assets/fonts/Calibri_Bold.TTF");
+}
+@font-face {
+  font-family: calibri_light;
+  src: url("./assets/fonts/Calibri_Light.ttf");
+}
+@font-face {
+  font-family: Artifakt;
+  src: url("./assets/fonts/Artifakt.ttf");
+}
+@font-face {
+  font-family: Artifakt_Bold;
+  src: url("./assets/fonts/Artifakt_Bold.otf");
+}
+*{
+  font-family: calibri_bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-height: 550px) {
+  body {
+    position: inherit;
+  }
+}
+@media (min-height: 551px) {
+  body {
+    position: fixed;
+  }
+}
+.first{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+.header .logo-icon{
+  float: left;
+  margin-right: 30px;
+  background-repeat: round;
+}
+.header .menu-toggle {
+  color: white;
+  margin-right: 60px;
+  z-index: 9;
+}
+
+@media (max-width: 767px) {
+  .header .logo-icon {
+    background-image: url(assets/images/logo/logo_mobile.png);
+    width: 220px;
+    height: 60px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+@media (min-width: 767px) {  
+  .header .logo-icon {
+    background-image: url(assets/images/logo/logo.png);
+    width: 525px;
+    height: 49px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.header .logo-label{
+  margin-top: 5px;
+}
+.modal-wrapper {
+  width: auto !important;
+  margin: 10px;
+}
+@media (min-width: 600px) {
+  .modal-wrapper {
+      margin: 30px auto;
+  }
+}
